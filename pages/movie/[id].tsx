@@ -22,8 +22,20 @@ export default function Movie({ movie }) {
 			}}
 		>
 			<div className={styles.movieContainer}>
-				<h1>{movie.title}</h1>
+				<h1>
+					{movie.title} ({movie.releaseYear})
+				</h1>
+				<p>Genres: {(movie.genres as string[]).join(", ")}</p>
 				<p>{movie.description}</p>
+				<p>
+					Cast:{" "}
+					{movie.topCast
+						.map((item) => {
+							return `${item.name} as ${item.characterName}`;
+						})
+						.join(", ")}
+				</p>
+
 				<object data={`/images/${movie.id}.jpeg`} type="image/jpeg">
 					<img src="/images/defaultImage.jpeg" />
 				</object>

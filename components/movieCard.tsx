@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import styles from "../styles/Index.module.css";
-import Link from "next/link";
 
 export default class MovieCard extends Component<
 	MovieCardProps,
@@ -20,14 +19,14 @@ export default class MovieCard extends Component<
 		let { title } = this.state;
 		return (
 			<div id={id} className={styles.movieCard}>
-				<Link href={`/movie/${id}`}>
+				<a href={`/movie/${id}`}>
 					<div>
 						<h1>{title}</h1>
 						<object data={`/images/${id}.jpeg`} type="image/jpeg">
 							<img src="/images/defaultImage.jpeg" />
 						</object>
 					</div>
-				</Link>
+				</a>
 			</div>
 		);
 	}

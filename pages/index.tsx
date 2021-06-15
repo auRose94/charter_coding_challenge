@@ -4,7 +4,7 @@ import styles from "../styles/Index.module.css";
 import MovieCard from "../components/movieCard";
 import { Component } from "react";
 
-const APIKEY = process.env.APIKEY || "Api-Key q3MNxtfep8Gt";
+const APIKEY = process.env.APIKEY || "Api-Key q3MNxtfep8Gt"; // Temp Fix... env not working
 
 export default class MainAppIndex extends Component<
 	MainAppIndexProps,
@@ -58,7 +58,6 @@ export default class MainAppIndex extends Component<
 		let response = await this.apiCall(
 			"https://code-challenge.spectrumtoolbox.com/api/movies"
 		);
-		console.log(response);
 		this.setState({
 			movies: response.data,
 			searchText,
