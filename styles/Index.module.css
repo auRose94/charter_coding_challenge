@@ -1,0 +1,43 @@
+.navBar {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 6px;
+	background: #424242;
+}
+
+.searchInput {
+	height: 1.5em;
+	font-size: 1.5em;
+	background: #323232;
+	border: none;
+	color: white;
+	border-radius: 32px 32px 32px 32px;
+	padding: 8px;
+}
+
+.genreSelect {
+	height: 1.5em;
+	font-size: 1.5em;
+	background: #323232;
+	border: none;
+	color: white;
+	border-radius: 32px 32px 32px 32px;
+	padding: 4px;
+	float: right;
+}
+
+.movieContainer {
+	width: 100%;
+	height: 100%;
+	background: #242424;
+}
+
+.searchInput:hover,
+.searchInput:active,
+.genreSelect:hover,
+.genreSelect:active {
+	background: #242424;
+	color: white;
+}
